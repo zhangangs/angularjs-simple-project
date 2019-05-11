@@ -1,0 +1,55 @@
+{
+    "forgetPass": {
+        "request.password": "Retrieve password | Website Name",
+        "action.return": "Back to login",
+        "reset.required.notuse": "Withdrawal is prohibited within 24 hours after resetting the login password.",
+        "account.name": "Username",
+        "loginName.required.notnull": "Username cannot be blank",
+        "next.step": "Next Step",
+        "newPassword": "New Password ",
+        "newPassword.required.notnull": "New password cannot be blank",
+        "confirmPassword": "Confirm password",
+        "confirmPassword.required.notnull": "Password confirmation cannot be blank",
+        "submit.modify": "Submit change",
+        "memo.title": "Don't have an account yet?",
+        "memo.list": "Now you can browse privately. Other users who share this device will not see your activities, but your downloaded content and bookmarks will still be saved on the device. For details",
+        "account.register": "Register",
+        "action.confirm": "Confirm",
+        "action.cancel": "Cancel",
+        "identifyCode": {
+            "title": "Get Code",
+            "mobile.placeholder":"Phone number",
+            "mobile.required.notnull":"Phone number cannot be blank",
+            "mobile.required.error":"Phone number entered was incorrect",
+            "mobile.required.correct":"Enter the correct phone number",
+            "mobile.required.exist":"Phone number already existed",
+            "captchacode.placeholder":"Captcha text",
+            "captchacode.required.notnull":"Captcha text cannot be blank",
+            "sms":"SMS Code",
+            "sms.placeholder":"SMS Code",
+            "sms.required.notnull":"SMS Code cannot be blank",
+            "sendSms":"Get Code",
+            "resend": "Send Again",
+            "email.address":"E-mail address",
+            "code":"Verification Code",
+            "code.required.notnull":"Verification Code cannot be blank"
+        },
+        "submit":"Register",
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "您的账号是必填项.",
+                    "minlength": "您的账号长度至少要有1个字符",
+                    "maxlength": "您的账号长度不能超过50个字符",
+                    "pattern": "你的账号只能使用小写英文以及数字"
+                }
+            },
+            "success": "<strong>注册成功!</strong> 请检查您的邮箱.",
+            "error": {
+                "fail": "<strong>注册失败!</strong> 请稍后再试.",
+                "userexists": "<strong>账号已被注册!</strong> 请选择其它账号.",
+                "emailexists": "<strong>邮件已经被注册!</strong> 请选择其它邮件."
+            }
+        }
+    }
+}

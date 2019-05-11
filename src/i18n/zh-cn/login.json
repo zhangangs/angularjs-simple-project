@@ -1,0 +1,45 @@
+{
+    "login": {
+        "title": "登录 | 网站名称",
+        "button.cancel": "取消",
+        "button.confirm": "确定",
+        "memo":"二级描述二级描述二级描述",
+        "form": {
+            "account":"账户名",
+            "account.placeholder":"您的账户名",
+            "account.required":"登录账户不能为空",
+            "password": "密码",
+            "password.placeholder": "您的密码",
+            "password.required": "登录密码不能为空",
+            "button": "登录账户"
+        },
+        "description":{
+            "title":"还没有账户?",
+            "memo":"现在，您便可进行私密浏览了。共用此设备的其他用户将不会看到您的活动，但您下载的内容和添加的书签仍会保存在设备上。 了解详情",
+            "button":"注册账户"
+        },
+        "authentication":{
+            "title":"身份认证",
+            "googlecode":"谷歌验证码",
+            "googleCode.required.notnull":"谷歌验证码不能为空",
+            "mobile.number":"账户名",
+            "phone.number":"手机号码",
+            "sms":"验证码",
+            "sms.bind":"(已绑定手机，将发送手机验证码)",
+            "smsCode.required.notnull":"验证码不能为空",
+            "sendSms":"发送验证码",
+            "resend":"重新发送",
+            "email.address": "邮箱地址",
+            "email.code": "邮箱验证码"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>登录失败!</strong> 请检查您的登录信息, 并重试一次."
+            }
+        },
+        "password" : {
+            "forgot": "忘记密码?",
+            "remember": "记住密码"
+        }
+    }
+}

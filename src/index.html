@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js hb-night" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <!-- 禁止goole自动翻译 -->
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网站名称</title>
+    <link rel="shortcut icon" href="https://angular.io/assets/images/favicons/favicon.ico" />
+    <!-- <link rel="manifest" href="manifest.webapp" /> -->
+    <!-- build:css assets/css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/angular-busy/dist/angular-busy.css" />
+    <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css assets/css/app.css -->
+    <!-- inject:css -->
+
+    <link rel="stylesheet" href="assets/css/styles/app.css">
+
+    <link rel="stylesheet" href="assets/css/styles/common.css">
+
+    <link rel="stylesheet" href="assets/css/styles/iconfont.css">
+
+    <link rel="stylesheet" href="assets/css/layouts/footer/footer.css">
+
+    <link rel="stylesheet" href="assets/css/layouts/navbar/navbar.css">
+
+    <link rel="stylesheet" href="assets/css/components/frontPagination/frontPagination.css">
+
+    <link rel="stylesheet" href="assets/css/pages/index/index.css">
+
+    <link rel="stylesheet" href="assets/css/pages/account/forgetPassword/forgetPassword.css">
+
+    <link rel="stylesheet" href="assets/css/pages/account/loginMain/loginMain.css">
+
+    <link rel="stylesheet" href="assets/css/pages/account/register/register.css">
+
+    <link rel="stylesheet" href="assets/css/pages/account/userManager/userManager.css">
+
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body ng-app="App" ng-strict-di>
+    <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- <page-ribbon></page-ribbon> -->
+    <!-- <layout-float></layout-float> -->
+    <!-- 导航条 -->
+    <div ui-view="navbar" ng-cloak></div>
+    <!-- 导航条 -->
+
+    <!-- 页面主体 -->
+    <div class="cf-container">
+        <div class="cf-well" ui-view="content">
+            <!-- Angular views -->
+        </div>
+        <footer></footer>
+    </div>
+    <!-- 页面主体 -->
+    
+    <noscript>
+        <h1>You must enable javascript to view this page.</h1>
+    </noscript>
+
+    <!-- build:js app/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/messageformat/messageformat.js"></script>
+    <script src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+    <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/echarts/dist/echarts.js"></script>
+    <script src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+    <script src="bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="bower_components/qrcode-generator/js/qrcode.js"></script>
+    <script src="bower_components/qrcode-generator/js/qrcode_UTF8.js"></script>
+    <script src="bower_components/angular-qrcode/angular-qrcode.js"></script>
+    <script src="bower_components/tg-angular-validator/dist/angular-validator.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-popups/dist/angular-popups.js"></script>
+    <script src="bower_components/angular-busy/dist/angular-busy.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
+    <script src="bower_components/swiper/dist/js/swiper.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- tradingView -->
+    <!-- <script src="vendors/charting_library/charting_library.min.js"></script>
+    <script src="vendors/charting_library/polyfills.js"></script>
+    <script src="vendors/charting_library/bundle.js"></script> -->
+    <!-- tradingView -->
+
+    <!-- scatter-js -->
+    <!-- <script src="vendors/scatter-js/bundles/scatterjs-core.min.js"></script>
+    <script src="vendors/scatter-js/bundles/scatterjs-plugin-eosjs.min.js"></script>
+    <script src="vendors/eosjs/package/lib/eos.js"></script> -->
+    <!-- scatter-js -->
+
+    <!-- build:js app/app.js  -->
+    <!-- inject:js -->
+
+    <script src="app/app.module.js"></script>
+
+    <script src="app/pages/account/userManager/userManager.state.js"></script>
+
+    <script src="app/pages/account/userManager/userManager.service.js"></script>
+
+    <script src="app/pages/account/userManager/userManager.controller.js"></script>
+
+    <script src="app/pages/account/register/register.state.js"></script>
+
+    <script src="app/pages/account/register/register.service.js"></script>
+
+    <script src="app/pages/account/register/register.directive.js"></script>
+
+    <script src="app/pages/account/register/register.controller.js"></script>
+
+    <script src="app/pages/account/loginMain/validate.controller.js"></script>
+
+    <script src="app/pages/account/loginMain/loginMain.state.js"></script>
+
+    <script src="app/pages/account/loginMain/loginMain.service.js"></script>
+
+    <script src="app/pages/account/loginMain/loginMain.controller.js"></script>
+
+    <script src="app/pages/account/forgetPassword/validate.controller.js"></script>
+
+    <script src="app/pages/account/forgetPassword/forgetPassword.state.js"></script>
+
+    <script src="app/pages/account/forgetPassword/forgetPassword.service.js"></script>
+
+    <script src="app/pages/account/forgetPassword/forgetPassword.controller.js"></script>
+
+    <script src="app/services/utils/utils.factory.js"></script>
+
+    <script src="app/services/interceptor/http.interceptor.js"></script>
+
+    <script src="app/services/config/translation.config.js"></script>
+
+    <script src="app/services/config/http.config.js"></script>
+
+    <script src="app/services/config/app.run.js"></script>
+
+    <script src="app/services/config/app.config.js"></script>
+
+    <script src="app/services/auth/principal.service.js"></script>
+
+    <script src="app/services/auth/auth.service.js"></script>
+
+    <script src="app/services/auth/auth.jwt.service.js"></script>
+
+    <script src="app/services/auth/account.service.js"></script>
+
+    <script src="app/pages/index/index.state.js"></script>
+
+    <script src="app/pages/index/index.service.js"></script>
+
+    <script src="app/pages/index/index.controller.js"></script>
+
+    <script src="app/pages/account/account.state.js"></script>
+
+    <script src="app/layouts/navbar/navbar.controller.js"></script>
+
+    <script src="app/layouts/navbar/active-menu.directive.js"></script>
+
+    <script src="app/layouts/footer/footer.directive.js"></script>
+
+    <script src="app/components/language/language.service.js"></script>
+
+    <script src="app/components/language/language.filter.js"></script>
+
+    <script src="app/components/language/language.controller.js"></script>
+
+    <script src="app/components/language/language.constants.js"></script>
+
+    <script src="app/components/frontPagination/frontPagination.directive.js"></script>
+
+    <script src="app/app.state.js"></script>
+
+    <script src="app/app.constants.js"></script>
+
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+
+</html>

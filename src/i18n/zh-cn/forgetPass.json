@@ -1,0 +1,56 @@
+{
+    "forgetPass": {
+        "title": "忘记密码",
+        "request.password": "找回密码",
+        "action.return": "返回登录",
+        "reset.required.notuse": "重置登录密码后24小时内xxxxx。",
+        "account.name": "账户名",
+        "loginName.required.notnull": "登录名不能为空",
+        "next.step": "下一步",
+        "newPassword": "新密码",
+        "newPassword.required.notnull": "新密码不能为空",
+        "confirmPassword": "确认密码",
+        "confirmPassword.required.notnull": "确认密码不能为空",
+        "submit.modify": "提交修改",
+        "memo.title": "还没有账户？",
+        "memo.list": "现在，您便可进行私密浏览了。共用此设备的其他用户将不会看到您的活动，但您下载的内容和添加的书签仍会保存在设备上。 了解详情",
+        "account.register": "注册账户",
+        "action.confirm": "确定",
+        "action.cancel": "取消",
+        "identifyCode": {
+            "title": "发送验证码",
+            "mobile.placeholder": "手机号码",
+            "mobile.required.notnull": "手机号码不能为空",
+            "mobile.required.error": "手机号码输入错误",
+            "mobile.required.correct": "输入正确的手机号码",
+            "mobile.required.exist": "手机号码已存在",
+            "captchacode.placeholder": "图形验证码",
+            "captchacode.required.notnull": "图形验证码不能为空",
+            "sms": "短信验证码",
+            "sms.placeholder": "短信验证码",
+            "sms.required.notnull": "短信验证码不能为空",
+            "sendSms": "发送验证码",
+            "resend": "重新发送",
+            "email.address": "邮箱地址",
+            "code": "验证码",
+            "code.required.notnull": "验证码不能为空"
+        },
+        "submit": "注册账户",
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "您的账号是必填项.",
+                    "minlength": "您的账号长度至少要有1个字符",
+                    "maxlength": "您的账号长度不能超过50个字符",
+                    "pattern": "你的账号只能使用小写英文以及数字"
+                }
+            },
+            "success": "<strong>注册成功!</strong> 请检查您的邮箱.",
+            "error": {
+                "fail": "<strong>注册失败!</strong> 请稍后再试.",
+                "userexists": "<strong>账号已被注册!</strong> 请选择其它账号.",
+                "emailexists": "<strong>邮件已经被注册!</strong> 请选择其它邮件."
+            }
+        }
+    }
+}

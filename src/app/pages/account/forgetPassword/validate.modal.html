@@ -1,0 +1,126 @@
+<!-- 手机验证 -->
+<form id="dialog__modal" ng-if="vm.resoure.data.isMobileAuth == '1'" angular-validator-submit="vm.method.updateAuth()"
+    name="form" novalidate angular-validator>
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button" ng-click="vm.method.cancel()">
+            <span class="iconfont icon-cancel"></span>
+        </button>
+        <h4 class="modal-title" data-translate="forgetPass.identifyCode.title"></h4>
+    </div>
+    <div class="modal-body">
+        <div action="">
+            <div class="form-group">
+                <label for="" data-translate="forgetPass.identifyCode.mobile.placeholder">
+                    <!-- <a href="" class="pull-right switch" ng-click="vm.data.selectAuthType = 1">
+                        切换谷歌验证
+                        <i>&gt;</i>
+                    </a> -->
+                </label>
+                <input autocomplete="off" type="text" class="form-control" ng-model="vm.resoure.data.mobileFormat" readonly>
+            </div>
+            <div class="form-group">
+                <label for="" data-translate="forgetPass.identifyCode.captchacode.placeholder"></label>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.captchacode" name="captchacode"
+                            validate-on="blur" required required-message="'{{'forgetPass.identifyCode.captchacode.required.notnull' |translate}}'">
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="identifyingcode">
+                            <img src="/exchmarcket-web-biz/v1/user/getcaptchaimage" ng-if="vm.isShow"
+                                class="imgcode" placeholder="image code" ng-click="vm.isShow=vm.refreshCaptch()" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" data-translate="forgetPass.identifyCode.sms"></label>
+                <div class="form-smsCode">
+                    <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.code" name="code" validate-on="blur"
+                        required required-message="'{{'forgetPass.identifyCode.code.required.notnull' |translate}}'">
+                    <div class="form-smsCode__body">
+                        <button class="btn btn-default btn-link" type="button" ng-click="vm.getSmsforPassword()" ng-if="!vm.data.captchacode || vm.data.disabled"
+                            ng-disabled="!vm.data.captchacode || vm.data.disabled">{{vm.data.text}}</button>
+                        <button class="btn btn-default btn-link" type="button" ng-click="vm.getSmsforPassword()" ng-if="!(!vm.data.captchacode || vm.data.disabled)"
+                            ng-disabled="!vm.data.captchacode || vm.data.disabled">{{vm.data.text}}</button>
+                        <!-- <time-down text="发送验证码" time='60' mobile="{{vm.data.mobile}}"></time-down> -->
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" ng-if="vm.resoure.data.isGoogleAuth == '1'">
+                <label for="">谷歌验证码</label>
+                <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.googleAuth" name="googleAuth" validate-on="blur"
+                    required required-message="'谷歌验证码不能为空'">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default pull-left" type="text" ng-click="vm.method.cancel()" data-translate="forgetPass.action.cancel"></button>
+        <button data-dismiss="modal" class="btn btn-primary pull-right" type="submit" button-loadbar="vm.isLoading"></button>
+    </div>
+</form>
+
+
+
+<!-- 邮箱认证 -->
+<form id="dialog__modal" ng-if="vm.resoure.data.isEmailAuth == '1'" angular-validator-submit="vm.method.updateAuth()"
+    name="form" novalidate angular-validator>
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button" ng-click="vm.method.cancel()">
+            <span class="iconfont icon-cancel"></span>
+        </button>
+        <h4 class="modal-title" data-translate="forgetPass.identifyCode.title">
+            
+        </h4>
+    </div>
+    <div class="modal-body">
+        <div action="">
+            <div class="form-group">
+                <label for="" data-translate="forgetPass.identifyCode.email.address">
+                    <!-- <a href="" class="pull-right switch" ng-click="vm.data.selectAuthType = 1">
+                        切换谷歌验证
+                        <i>&gt;</i>
+                    </a> -->
+                </label>
+                <input autocomplete="off" type="text" class="form-control" ng-model="vm.resoure.data.mobileFormat" readonly>
+            </div>
+            <div class="form-group">
+                <label for="" data-translate="forgetPass.identifyCode.captchacode.placeholder"></label>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.captchacode" name="captchacode"
+                            validate-on="blur" required required-message="'{{'forgetPass.identifyCode.captchacode.required.notnull' |translate}}'">
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="identifyingcode">
+                            <img style="height: 36px;" src="/exchmarcket-web-biz/v1/user/getcaptchaimage" ng-if="vm.isShow"
+                                class="imgcode" placeholder="image code" ng-click="vm.isShow=vm.refreshCaptch()" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" data-translate="forgetPass.identifyCode.code"></label>
+                <div class="form-smsCode">
+                    <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.code" name="code" validate-on="blur"
+                        required required-message="'{{'forgetPass.identifyCode.code.required.notnull' |translate}}'">
+                    <div class="form-smsCode__body">
+                        <button class="btn btn-default btn-link" type="button" ng-click="vm.getSmsforPassword()" ng-if="!vm.data.captchacode || vm.data.disabled"
+                            ng-disabled="!vm.data.captchacode || vm.data.disabled">{{vm.data.text}}</button>
+                        <button class="btn btn-default btn-link" type="button" ng-click="vm.getSmsforPassword()" ng-if="!(!vm.data.captchacode || vm.data.disabled)"
+                            ng-disabled="!vm.data.captchacode || vm.data.disabled">{{vm.data.text}}</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" ng-if="vm.resoure.data.isGoogleAuth == '1'">
+                <label for="">谷歌验证码</label>
+                <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.googleAuth" name="googleAuth" validate-on="blur"
+                    required required-message="'谷歌验证码不能为空'">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default pull-left" type="text" ng-click="vm.method.cancel()" data-translate="forgetPass.action.cancel"></button>
+        <button data-dismiss="modal" class="btn btn-primary pull-right" type="submit" data-translate="forgetPass.action.confirm"></button>
+    </div>
+</form>

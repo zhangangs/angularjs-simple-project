@@ -1,0 +1,12 @@
+{
+    "home": {
+        "title": "首页 | 网站名称",
+        "action.obtain": "立刻获取BUSD",
+        "action.timely": "马上交易",
+        "action.taste": "立即体验",
+        "action.register": "注册",
+        "subtitle": "这里是首页",
+        "more": "更多...",
+        "mobile.required.notnull": "手机号码不能为空"
+    }
+}

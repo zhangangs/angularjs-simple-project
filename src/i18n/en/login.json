@@ -1,0 +1,45 @@
+{
+    "login": {
+        "title": "Sign in | Website Name",
+        "button.cancel": "Cancel",
+        "button.confirm": "Confirm",
+        "memo":"The fiat shares one account with the exchange",
+        "form": {
+            "account":"Account",
+            "account.placeholder":"Your account",
+            "account.required":"The login account cannot be empty",
+            "password": "Password",
+            "password.placeholder": "Your password",
+            "password.required": "The login password cannot be empty",
+            "button": "Sign in"
+        },
+        "description":{
+            "title":"No account ?",
+            "memo":"Now you can browse in private. Other users who share the device will not see your activity, but the content you download and bookmark you add will still be on the device. For details",
+            "button":"Sign up"
+        },
+        "authentication":{
+            "title":"Identity Verification",
+            "googlecode":"Google Authentication Code",
+            "googleCode.required.notnull":"Coogle verification code cannot be blank",
+            "mobile.number":"Account Name",
+            "phone.number":"Phone number",
+            "sms":"SMS verification code",
+            "sms.bind":"(Cellphone bound, SMS verification code will be sent)",
+            "smsCode.required.notnull":"Verification Code cannot be blank",
+            "sendSms":"Send Code",
+            "resend":"Send Again",
+            "email.address": "E-mail address",
+            "email.code": "Email Code"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Failed to sign in!</strong> Please check your credentials and try again."
+            }
+        },
+        "password" : {
+            "forgot": "Forgot your password?",
+            "remember": "Save Password"
+        }
+    }
+}

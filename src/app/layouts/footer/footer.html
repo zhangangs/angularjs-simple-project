@@ -1,0 +1,42 @@
+<div class="footer" ng-cloak>
+    <div class="footer-body">
+        <div class="footer-item">
+            <div class="footer-info">
+                <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="">
+                <div class="footer-form">
+                    <p>加入我们，xxxxxxxxx</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="输入手机号码" ng-model="vm.data.mobile">
+                        <span class="input-group-addon" ui-sref="register({type:0, mobile:vm.data.mobile})">注册</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li>
+                    <b data-translate="footer.ourServices.main"></b>
+                    <a href="" ng-repeat="data in vm.data.service" ui-state="data.url">{{'footer.ourServices.ecology'+
+                        $index | translate}}</a>
+                </li>
+                <li>
+                    <b data-translate="footer.tool.main"></b>
+                    <a href="" ng-repeat="data in vm.data.tools" ui-state="data.url">{{'footer.tool.document'+ $index |
+                        translate}}</a>
+                    
+                </li>
+                <li>
+                    <b data-translate="footer.aboutUs.main"></b>
+                    <a href="" ng-repeat="data in vm.data.about" ui-state="data.url">{{'footer.aboutUs.join'+ $index |
+                        translate}}</a>
+                   
+                </li>
+                <li>
+                    <b data-translate="footer.stipulation.main"></b>
+                    <a href="" ng-repeat="data in vm.data.clause" ui-state="data.url">{{'footer.stipulation.protoco'+
+                        $index | translate}}</a>
+                </li>
+            </ul>
+
+        </div>
+        <p>网站 @copyright </p>
+    </div>
+</div>

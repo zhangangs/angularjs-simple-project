@@ -1,0 +1,73 @@
+{
+    "global": {
+        "title": "Website Name",
+        "mymessage": "My Message",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+        "menu": {
+            "home": "Home",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "Entities",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "navbar": {
+                "legal.orders": "Fiat Order",
+                "mycoin": "My Coin",
+                "hour.coin": "1-hour Listing",
+                "dex.exchange": "DEX exchange",
+                "what.memo": "What is BUSD?"
+            },
+            "account": {
+                "main": "Account",
+                "settings": "Settings",
+                "password": "Password",
+                "sessions": "Sessions",
+                "login": "Sign In",
+                "logout": "Sign Out",
+                "register": "Register",
+                "userInfo": "User Info",
+                "accountSetting": "Account Setting"
+            },
+            "myapi": {
+                "title": "My API",
+                "accountSetting":"Account Settings"
+            },
+            "admin": {
+                "main": "Administration",
+                "userManagement": "User management",
+                "tracker": "User tracker",
+                "metrics": "Metrics",
+                "health": "Health",
+                "configuration": "Configuration",
+                "logs": "Logs",
+                "audits": "Audits",
+                "apidocs": "API",
+                "database": "Database",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Language",
+            "exchange": "Exchange",
+            "OTC": "Title 2",
+            "balances": {
+              "title": "Balances",
+              "myBalance":"My Balance",
+              "messages": {
+                  "error": {
+                      "authentication": "<strong>get Data error!</strong> please try agein."
+                  }
+              }
+            },
+            "orders": {
+                "title": "Orders",
+                "order":"Open Orders",
+                "history":"Order History",
+                "transaction":"Transaction History",
+                "messages": {
+                    "error": {
+                        "authentication": "<strong>get Data error!</strong> please try agein."
+                    }
+                }
+            }
+        }       
+    }
+}

@@ -1,0 +1,202 @@
+{
+  "userInfo": {
+      "title": "Personal | Website Name",
+      "baseInfo": "Basic Information",
+      "account": "ID",
+      "nickname": "Nickname",
+      "invite": "Invitation Code",
+      "inviteCopy":"Copy",
+      "boundAccount":"Affiliated Account",
+      "lastLoginTime": "Last login time",
+      "button.cancel": "Cancel",
+      "button.confirm": "Confirm",
+      "select.type": "Choose ID type",
+      "enter.name": "Enter name",
+      "identification": "verifying",
+      "unauthorized": "Unverified",
+      "unseting": "Not set up yet",
+      "payment.method": "Collection Method",
+      "set.payment": "Set up your collection method",
+      "bankCard.accounts": "Bank Card",
+      "opening.bank": "Bank Name",
+      "bankCard.set": "Bank card has been set",
+      "payee": "Receipt",
+      "alipay.account": "Alipay Account",
+      "account.set": "Account has been set",
+      "bankCard.name": "Name",
+      "payment.code": "QR Code",
+      "account.unuse": "Account not set up",
+      "weChat.account": "Wechat Account",
+      "wallet.eos": "EOS Wallet",
+      "wallet.eos.memo": "EOS wallet decentralized transactions, free deposit and withdrawl",
+      "button.accounts": "Click to transfer",
+      "certification": "Real Name Verification",
+      "noData": "No orders yet",
+      "loading": "loading",
+      "loginPass": {
+          "password": "Password",
+          "button": "Modify",
+          "button.modify": "Change Password",
+          "button.oldPwd": "Old Password",
+          "button.newPwd": "New Password",
+          "required.notnull":"Cannot be blank",
+          "oldPwd.required.notnull":"Old password cannot be blank",
+          "newPwd.required.notnull":"New password cannot be blank",
+          "button.repeatPwd": "Confirm New Password",
+          "password.memo":"For your account security, please change your password frequently",
+          "mobile.number": "Phone number",
+          "mobile.required.notnull":"phone number cannot be empty",
+          "mobile.required.error":"phone number error",
+          "mobile.required.exist":"The phone number already exists",
+          "verCode.required.notnull":"SMS Code cannot be blank",
+          "vcode.required.notnull":"Verification Code cannot be blank",
+          "code.required.notnull":"Phone number cannot be blank",
+          "googleCode":"Google Authentication Code",
+          "googleCode.required.notnull":"Coogle verification code cannot be blank",
+          "captchacode":"Captcha Code",
+          "captchacode.placeholder":"captcha code",
+          "captchacode.required.notnull":"The captcha cannot be empty",
+          "captchacode.required.error":"Captcha code error",
+          "sms":"Sms Code",
+          "sendSms":"Send Code",
+          "resend":"Send Again",
+          "sms.placeholder":"sms code",
+          "password.placeholder":"password",
+          "confirmPassword":"Comfirm Password",
+          "confirmPassword.placeholder":"comfirm password",
+          "inviteCode":"Invitation code(optional)",
+          "inviteCode.placeholder":"invitation Code",
+          "comfirm":" I agree to the",
+          "agreement":"User Agreement"
+        },
+        "userAuth": {
+          "title": "Identity Authentication",
+          "auth.none":"For the securtiy of your assets, withdrawls are not permitted until passed the identity verification",
+          "auth.levelLow":"For higher withdrawal and transaction amount, please conduct secondary certification",
+          "auth.levelHigh":"Authenticated and cannot be modified",
+          "auth.button": "Identity",
+          "auth.identity": "Verified",
+          "auth.IDidentity": "Verifying Identity",
+          "auth.failureToPass": "Verification Failed",
+          "auth.notPass": "fail",
+          "auth.recertification": "Reverification"
+        },
+        "mobileBound": {
+          "title": "Phone",
+          "bind.title": "Bind cellphone number",
+          "modify.title": "Change Phone Number",
+          "newNumber": "New Phone Number",
+          "description.begin":"Your phone has been authenticated",
+          "description.end":"[Your phone number can be used directly for login, password retrieval]",
+          "bind.mobile":"Bind cellphone",
+          "bind.retrievePwd.desc":"Bind cellphone number can be used to login and retrieve passwod",
+          "retrievePwd.desc":"Can be used to login and retrieve passwod",
+          "button":"Completed",
+          "action.bound":"Setting",
+          "action.update":"Modify"
+        },
+        "emailBound": {
+          "title": "E-mail",
+          "bind.title": "Bind E-mail",
+          "untie.title": "Unbind e-mail",
+          "modify.title": "Modify e-mail",
+          "mobileCode":"SMS Code",
+          "email.address": "E-mail address",
+          "newEmail": "New E-mail address",
+          "emailCode": "Email Code",
+          "emailUntie": "E-mail unbound",
+          "description.begin":"E-mail linked",
+          "description.end":"[Can be used to login and retrieve passwod]",
+          "email.required.notnull":"Email cannot be blank",
+          "emailaddress.required.notnull":"E-mail address cannot be blank",
+          "button":"Completed",
+          "action.upmodify":"Unchangeable",
+          "action.bound":"Setting",
+          "action.update":"Update"
+        },
+        "googleBound": {
+          "title": "Google Authentication",
+          "verified": "Google Authentication",
+          "untieGoogle": "Unbind Google account",
+          "QRCodeKeyt": "2,Google QR Code and Key",
+          "memo": "Enhance account security. With two-step authentication, you can double protect accounts with passwords and mobile phones",
+          "bound.yes":"Your google has been authenticated",
+          "bound.none":"You have not bound Google authenticated",
+          "google.memo":"1,下载安装谷歌身份验证器",
+          "button":"Completed",
+          "secret.key":"Key",
+          "secret.key.memo":"The key is used to retrieve the Google authenticator when the phone is replaced or lost. Please make sure to backup and save the above key before binding.",
+          "action.bound":"Settings",
+          "action.update":"Update"
+        },
+        "idCard": {
+          "hint":"Example",
+          "action.upload":"Click to Upload",
+          "action.submit":"Submit Information",
+          "baseInfo": {
+              "title": "Basic Information.",
+              "memo": "For the security of your assets, please verify your identity before any other actions. Please be noted that your information cannot be changed after the verification. Please provide complete and accurate information.",
+              "nationality": "Nationality",
+              "China": "China",
+              "IDType": "ID Type ",
+              "IDCard": "Personal ID Card",
+              "passport": "Passport",
+              "name": "Name",
+              "name.required.notnull": "Name cannot be blank",
+              "IDNumber": "ID Number",
+              "enter.IDNumber": "Enter ID number",
+              "IDNumber.required.notnull": "ID Number cannot be blank"
+          },
+          "uploadID": {
+              "title": "Upload ID.",
+              "memo": "Please upload the below items in the format of jpg / jpeg / png and make sure that the photo is clear and complete. The file size cannot exceed 3MB.",
+              "uploadCaseOne": {
+                "title": "1.Front of Personal ID.",
+                "memosms": "Please upload the below items in the format of jpg / jpeg / png and make sure that the photo is clear and complete. The file size cannot exceed 3MB.",
+                "action.modify":"Edit Photo"
+              },
+              "uploadCaseTwo": {
+                "title": "2.Front of Personal ID.",
+                "memosms": "Please upload the below items in the format of jpg / jpeg / png and make sure that the photo is clear and complete. The file size cannot exceed 3MB."
+              },
+              "uploadCaseThree": {
+                "title": "3.Photo with ID card held in hand",
+                "memosms": "Please upload the below items in the format of jpg / jpeg / png and make sure that the photo is clear and complete. The file size cannot exceed 3MB."
+              }
+          }
+        },
+        "EOSWallet": {
+          "bind.wallet": "en绑定钱包",
+          "transaction": "去交易",
+          "unbund.wallet": "解绑钱包"
+        },
+        "deviceManage": {
+          "title": "Manage Device",
+          "listTab": {
+            "device": "Device",
+            "location": "Login location",
+            "active": "Latest active time",
+            "ipAddress": "IP Address",
+            "operation": "Action",
+            "delete": "Delete Device"
+          }
+        },
+        "submit":"Sign Up",
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "Your username is required.",
+                    "minlength": "Your username is required to be at least 1 character.",
+                    "maxlength": "Your username cannot be longer than 50 characters.",
+                    "pattern": "Your username can only contain letters and digits."
+                }
+            },
+            "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
+            "error": {
+                "fail": "<strong>Registration failed!</strong> Please try again later.",
+                "userexists": "<strong>Login name already registered!</strong> Please choose another one.",
+                "emailexists": "<strong>Email is already in use!</strong> Please choose another one."
+            }
+        }
+    }
+}

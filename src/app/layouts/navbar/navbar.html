@@ -1,0 +1,183 @@
+<header class="header-wraper" id="top" ng-controller="JhiLanguageController as languageVm" ng-class="{
+    'index-header':vm.$state.current.name == 'index',
+    'coincoin-header':vm.$state.current.name == 'coin-coin',
+    'about-header': vm.$state.current.name.indexOf('about') != -1,
+    'dex-header':vm.$state.current.name == 'dex-list',
+    'fund-header': vm.$state.current.name == 'fund-list',
+    'quick-trade-list-header': vm.$state.current.name == 'quick-trade-list'
+}">
+    <div class="doc-head" id="bs-navbar">
+        <div class="head-logo">
+            <a href="" ui-sref="index">
+                <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" style="max-height:29px;" title="随便写的样式，请放到样式表中" />
+                <span>网站名称</span>
+            </a>
+        </div>
+        <div class="head-nav">
+            <div class="head-left">
+                <ul class="head-nav-list">
+                    <li>
+                        <a href="" ui-sref="fund-list" ng-class='{"active":vm.$state.current.name == "fund-list"}'>标题一</a>
+                        <img src="/assets/images/new.png" alt="">
+                    </li>
+                    <li>
+                        <a ui-sref="quick-trade-list" ng-class='{"active":vm.$state.current.name == "quick-trade-list"}'
+                            data-translate="global.menu.OTC"></a>
+                    </li>
+                    <li>
+                        <a href="" ui-sref="dex-list" ng-class='{"active":vm.$state.current.name == "dex-list"}'>标题二</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="head-right">
+                <!-- inner -->
+                <ul class="nav navbar-top-links navbar-nohover head-navbar-line" ng-switch="vm.isAuthenticated()" ng-if="vm.$state.current.name != 'index' || (vm.$state.current.name == 'index' && vm.isAuthenticated())">
+                    <!-- <li><span class="cutline"></span></li> -->
+                    <li class="dropdown" ng-switch-when="true" ui-sref-active="active" uib-dropdown class="dropdown">
+                        <a class="dropdown-toggle" uib-dropdown-toggle>
+                            <span data-translate="global.menu.balances.title"> Balances </span>
+                            <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        </a>
+                        <ul class="dropdown-menu" uib-dropdown-menu>
+                            <!-- <i class="transparent-arrow"></i> -->
+                            <li>
+                                <a ui-sref="balances({accountType:0})">
+                                    <span data-translate="global.menu.balances.myBalance"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <li class="dropdown" ng-switch-when="true" ui-sref-active="active" uib-dropdown class="dropdown">
+                        <a class="dropdown-toggle" uib-dropdown-toggle>
+                            <span data-translate="global.menu.orders.title"> Orders </span>
+                            <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        </a>
+                        <ul class="dropdown-menu" uib-dropdown-menu>
+                            <!-- <i class="transparent-arrow"></i> -->
+                            <!-- <li><a ui-sref="orders"><i class="fa fa-user fa-fw"></i> <span data-translate="global.menu.orders.order">Open Orders</span></a></li> -->
+
+                            <li>
+                                <a ui-sref="myOrderList({orderStatus:0})" href="">
+                                    <span>我的交易单</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="cointradeOrderList">
+                                    <span data-translate="global.menu.navbar.legal.orders"></span>
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a ui-sref="orders({type:2})"><i class="fa fa-sign-out fa-fw"></i>
+                                    <span data-translate="global.menu.orders.transaction">Transaction Histor</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="orders({type:1})"><i class="fa fa-gear fa-fw"></i>
+                                    <span data-translate="global.menu.orders.history">Order History</span>
+                                </a>
+                            </li> -->
+                            <li>
+                                <a href="" ui-sref="oreder-fund({type:1})">
+                                    <span>基金订单</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+
+                    <li class="dropdown dropdownuse" ng-switch-when="true" ui-sref-active="active" uib-dropdown class="dropdown">
+                        <a class="dropdown-toggle" uib-dropdown-toggle>
+                            <!-- <span class="dropdown-toggle"></span> -->
+                            <span class="hidden-sm"> {{vm.account.userNameFormat}}</span>
+                            <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        </a>
+                        <ul class="dropdown-menu" uib-dropdown-menu>
+                            <i class="transparent-arrow"></i>
+                            <li>
+                                <a ui-sref="userManager" data-translate="global.menu.account.userInfo"> User Info</a>
+                            </li>
+                            <!-- <li><a ui-sref="accountSetting" data-translate="global.menu.account.accountSetting">Account
+                                    Setting</a></li> -->
+                            <!-- <li>
+                                <a href="" ui-sref="coinapplyList" data-translate="global.menu.navbar.mycoin"></a>
+                            </li> -->
+                            <li>
+                                <a href="" ui-sref="apiManage({type:0})" data-translate="global.menu.myapi.title"></a>
+                            </li>
+                            <li>
+                                <a ng-click="vm.logout()" data-translate="global.menu.account.logout">logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li><span class="cutline"></span></li> -->
+                    <li ui-sref-active="active" uib-dropdown class="dropdown pointer">
+                        <a class="dropdown-toggle" uib-dropdown-toggle href="" ng-if="languageVm.languages.length > 1">
+                            <span data-translate="global.menu.language">Language</span>
+                            <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        </a>
+                        <ul class="dropdown-menu" uib-dropdown-menu ng-if="languageVm.languages.length > 1">
+                            <i class="transparent-arrow"></i>
+                            <li active-menu="{{language}}" ng-repeat="language in languageVm.languages">
+                                <a href="" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();">
+                                    {{language | findLanguageFromKey}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li ui-sref-active="active" ng-switch-when="false">
+                        <!-- <a href="" ng-click="vm.login()" id="login"> -->
+                        <a href="" ui-sref="LoginMain" id="login">
+                            <!-- <span class="glyphicon glyphicon-log-in"></span>&nbsp; -->
+                            <span data-translate="global.menu.account.login">Sign in</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active" ng-switch-when="false">
+                        <a ui-sref="register" ng-click="vm.collapseNavbar()">
+                            <!-- <span class="glyphicon glyphicon-plus-sign"></span>&nbsp; -->
+                            <span data-translate="global.menu.account.register">Register</span>
+                        </a>
+                    </li>
+                    <li ui-sref="userMessage">
+                        <a title="{{'global.mymessage' |translate}}">
+                            <b class="iconfont icon-remind icon-xl"></b>
+                        </a>
+                        <span class="label label-danger msg-label" ng-if="vm.unreadMag > 0"></span>
+                    </li>
+                    <li>
+                        <a  target="_blank" title="{{'footer.tool.help' |translate}}">
+                            <b class="iconfont icon-help icon-xl"></b>
+                        </a>
+                    </li>
+                </ul>
+                <!-- inner -->
+
+                <!-- index -->
+                <ul class="index-navbar" ng-if="vm.$state.current.name == 'index' &&  !vm.isAuthenticated()">
+                    <!-- <li>
+                        <a href="" data-translate="global.menu.navbar.what.memo"></a>
+                    </li> -->
+                    <li ui-sref-active="active" uib-dropdown class="dropdown pointer">
+                        <a class="dropdown-toggle" uib-dropdown-toggle href="" ng-if="languageVm.languages.length > 1">
+                            <span data-translate="global.menu.language">Language</span>
+                            <b class="glyphicon glyphicon-triangle-bottom"></b>
+                        </a>
+
+                        <ul class="dropdown-menu" uib-dropdown-menu ng-if="languageVm.languages.length > 1">
+                            <!-- <i class="transparent-arrow"></i> -->
+                            <li active-menu="{{language}}" ng-repeat="language in languageVm.languages">
+                                <a href="" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();">
+                                    {{language| findLanguageFromKey}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="btn" ui-sref="LoginMain({route_id:'index'})" data-translate="global.menu.account.login"></button>
+                    </li>
+                    <li><a href="" ui-sref="register" data-translate="global.menu.account.register"></a></li>
+                </ul>
+                <!-- index -->
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,114 @@
+<!-- 谷歌认证 -->
+<form id="dialog__modal" ng-if="vm.resoure.account.authType == 2" angular-validator-submit="vm.method.stepTwo()" name="form"
+    novalidate angular-validator>
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button" ng-click="vm.method.cancel()"><span
+                class="iconfont icon-cancel"></span></button>
+        <h4 class="modal-title" data-translate="login.authentication.title"></h4>
+    </div>
+    <div class="modal-body">
+        <div action="">
+            <div class="form-group">
+                <label for="" data-translate="login.authentication.googlecode">
+                </label>
+                <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.code" name="authCode"
+                    validate-on="blur" required required-message="'{{'login.authentication.googleCode.required.notnull' |translate}}'"
+                    ng-keyup="vm.method.submitForm($event)" autofocus="autofocus" />
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" title="取消" class="btn btn-default pull-left" type="text" ng-click="vm.method.cancel()"
+            data-translate="login.button.cancel"></button>
+        <button data-dismiss="modal" title="确定" class="btn btn-primary pull-right" type="submit" button-loadbar="vm.isLoading">
+            <span data-translate="login.button.confirm"></span>
+        </button>
+    </div>
+</form>
+<!-- 谷歌认证 -->
+
+
+<!-- 手机认证 -->
+<form id="dialog__modal" ng-if="vm.resoure.account.authType == 1" angular-validator-submit="vm.method.stepTwo()" name="form"
+    novalidate angular-validator>
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button" ng-click="vm.method.cancel()">
+            <span class="iconfont icon-cancel"></span></button>
+        <h4 class="modal-title" data-translate="login.authentication.title"></h4>
+    </div>
+    <div class="modal-body">
+        <div action="">
+            <div class="form-group">
+                <label for="" data-translate="login.authentication.mobile.number">
+                </label>
+                <input autocomplete="off" type="text" class="form-control form-unuser" autofocus="autofocus"
+                    placeholder="{{'login.authentication.phone.number' |translate}}" ng-model="vm.resoure.account.mobileFormat" readonly />
+            </div>
+            <div class="form-group">
+                <label for="" >
+                    <span data-translate="login.authentication.sms"></span>
+                    <span style='color:#b61616; font-size: 13px;' ng-if="!vm.resoure.account.isMobile" data-translate="login.authentication.sms.bind"> (已绑定手机，将发送手机验证码)</label>
+                </label>
+                <div class="form-smsCode">
+                    <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.code" name="smsCode"
+                        validate-on="blur" required required-message="'{{'login.authentication.smsCode.required.notnull' |translate}}'"
+                        ng-keyup="vm.method.submitForm($event)">
+                    <div class="form-smsCode__body">
+                        <time-down text="{{'login.authentication.sendSms' |translate}}" resend="{{'login.authentication.resend' |translate}}" time='60' user-id='{{vm.resoure.account.userID}}'></time-down>
+                        <!-- <a class="btn btn-default btn-link" ng-click="vm.method.sendLoginAuthCode()">发送验证码</a> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" title="{{'login.button.cancel' |translate}}" class="btn btn-default pull-left" type="text" ng-click="vm.method.cancel()"
+            data-translate="login.button.cancel"></button>
+        <button data-dismiss="modal" title="{{'login.button.confirm' |translate}}" class="btn btn-primary pull-right" type="submit" button-loadbar="vm.isLoading">
+            <span data-translate="login.button.confirm"></span>
+        </button>
+    </div>
+</form>
+<!-- 手机认证 -->
+
+<!-- 邮箱认证 -->
+<form id="dialog__modal" ng-if="vm.resoure.account.authType == 3" angular-validator-submit="vm.method.stepTwo()" name="form"
+    novalidate angular-validator>
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button" ng-click="vm.method.cancel()">
+            <span class="iconfont icon-cancel"></span></button>
+        <h4 class="modal-title" data-translate="login.authentication.title"></h4>
+    </div>
+    <div class="modal-body">
+        <div action="">
+            <div class="form-group">
+                <label for="" data-translate="login.authentication.email.address">
+                </label>
+                <input autocomplete="off" type="text" class="form-control form-unuser" placeholder="{{'login.authentication.email.address' |translate}}"
+                    ng-model="vm.resoure.account.mobileFormat" readonly>
+            </div>
+            <div class="form-group">
+                <label for="" data-translate="login.authentication.email.code">
+                </label>
+                <div class="form-smsCode">
+                    <input autocomplete="off" type="text" class="form-control" ng-model="vm.data.code" name="smsCode"
+                        validate-on="blur" required required-message="'{{'login.authentication.smsCode.required.notnull' |translate}}'"
+                        ng-keyup="vm.method.submitForm($event)" autofocus="autofocus" />
+                    <div class="form-smsCode__body">
+                        <time-down text="{{'login.authentication.sendSms' |translate}}" resend="{{'login.authentication.resend' |translate}}" time='60' user-id='{{vm.resoure.account.userID}}'></time-down>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" title="关闭" class="btn btn-default pull-left" type="text" ng-click="vm.method.cancel()"
+            data-translate="login.button.cancel"></button>
+        <button data-dismiss="modal" title="确定" class="btn btn-primary pull-right" type="submit" button-loadbar="vm.isLoading">
+            <span data-translate="login.button.confirm"></span>
+        </button>
+    </div>
+</form>
+<!-- 邮箱认证 -->

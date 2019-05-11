@@ -1,0 +1,81 @@
+<div id="index">
+    <!-- 首屏 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-slide__content">
+                    <div class="swiper-slide__inner">
+                        <h1>一级标题</h1>
+                        <div class="sub-title">
+                            <p>信息信息信息信息信息信息信息信息信息信息信息信息信息信息</p>
+                            <p>信息信息信息信息信息信息信息信息信息信息信息信息信息信息</p>
+                        </div>
+                        <button class="btn" ui-sref="about.download">
+                            <span>下载APP</span>
+                            <div class="download">
+                                <i class="iconfont icon-swapright"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="swiper-slide__phone">
+                        <img src="/assets/images/fund/mobile.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-slide__content">
+                    <div class="swiper-slide__inner">
+                        <h1>一级标题</h1>
+                        <div class="sub-title">
+                            <p>信息信息信息信息信息信息信息信息信息信息信息信息信息信息</p>
+                            <p>信息信息信息信息信息信息信息信息信息信息信息信息信息信息</p>
+                        </div>
+                        <button class="btn" ui-sref="about.download">
+                            <span>下载APP</span>
+                            <div class="download">
+                                <i class="iconfont icon-swapright"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="swiper-slide__phone">
+                        <img src="/assets/images/fund/mobile.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- new -->
+        <div class="news">
+            <div class="new-body">
+                <ul class="new-item">
+                    <li ng-repeat="article in vm.resoure.articles | limitTo: 4">
+                        <i class="iconfont icon-laba" ng-if="!$index"></i>
+                        <a href="{{article.html_url}}" target="_blank" title="{{article.title}}">
+                            {{article.title}}</a>
+                        <span>{{article.created_at | date:'yyyy-MM-dd'}}</span>
+                    </li>
+                </ul>
+                <ul class="new-item">
+                    <li ng-repeat="article in vm.resoure.articles" ng-if="$index > 3 && $index < 8">
+                        <i class="iconfont icon-laba" ng-if="!$index"></i>
+                        <a href="{{article.html_url}}" target="_blank" title="{{article.title}}">
+                            {{article.title}}</a>
+                        <span>{{article.created_at | date:'yyyy-MM-dd'}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- new -->
+
+        <!-- 首屏 -->
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+</div>

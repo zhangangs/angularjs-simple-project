@@ -1,0 +1,202 @@
+{
+    "userInfo": {
+        "title": "个人中心 | 网站名称",
+        "baseInfo": "基本信息",
+        "account": "账号",
+        "nickname": "昵称",
+        "invite": "邀请码",
+        "inviteCopy":"复制",
+        "boundAccount":"已绑定账户",
+        "lastLoginTime": "最后登录时间",
+        "button.cancel": "取消",
+        "button.confirm": "确定",
+        "select.type": "请选择证件类型",
+        "enter.name": "输入姓名",
+        "identification": "认证中",
+        "unauthorized": "未认证",
+        "certification": "实名认证",
+        "unseting": "暂未设置",
+        "payment.method": "收款方式",
+        "set.payment": "设置你的收款方式",
+        "bankCard.accounts": "银行卡转账",
+        "opening.bank": "开户行",
+        "bankCard.set": "已设置银行卡",
+        "payee": "收款人",
+        "alipay.account": "支付宝账号",
+        "account.set": "已设置账号",
+        "bankCard.name": "姓名",
+        "payment.code": "收款码",
+        "account.unuse": "账号未设置",
+        "weChat.account": "微信账号",
+        "wallet.eos": "EOS 钱包",
+        "wallet.eos.memo": "EOS 钱包去中心化交易，自主冲、提币",
+        "button.accounts": "点击转账",
+        "noData": "暂无数据",
+        "loading": "加载中",
+        "loginPass": {
+          "button": "修改",
+          "button.modify": "修改密码",
+          "button.oldPwd": "原密码",
+          "button.newPwd": "新密码",
+          "required.notnull":"不能为空",
+          "oldPwd.required.notnull":"原密码不能为空",
+          "newPwd.required.notnull":"新密码不能为空",
+          "button.repeatPwd": "重复密码",
+          "password.memo":"为了账户安全，建议经常更换密码",
+          "mobile.number": "手机号码",
+          "mobile.required.notnull":"手机号码不能为空",
+          "code.required.notnull":"手机号码不能为空",
+          "verCode.required.notnull":"手机验证码不能为空",
+          "vcode.required.notnull":"验证码不能为空",
+          "mobile.required.error":"手机号码输入错误",
+          "mobile.required.exist":"手机号码已存在",
+          "googleCode":"谷歌验证码",
+          "googleCode.required.notnull":"谷歌验证码不能为空",
+          "captchacode":"图形验证码",
+          "captchacode.placeholder":"图形验证码",
+          "captchacode.required.notnull":"图形验证码不能为空",
+          "captchacode.required.error":"图形验证码错误",
+          "sms":"短信验证码",
+          "smsEmail":"邮箱验证码",
+          "sendSms":"发送验证码",
+          "resend":"重新发送",
+          "sms.placeholder":"短信验证码",
+          "password":"登录密码",
+          "password.placeholder":"输入密码",
+          "confirmPassword":"确认密码",
+          "confirmPassword.placeholder":"确认密码",
+          "inviteCode":"邀请码(选填)",
+          "inviteCode.placeholder":"邀请码",
+          "comfirm":"我已阅读并同意",
+          "agreement":"用户协议"
+        },
+        "userAuth": {
+          "title": "身份认证",
+          "auth.none":"为了您的资产安全,通过身份认证才可以进行提现等操作",
+          "auth.levelLow":"为获得更高提现,交易金额,请进行二级认证",
+          "auth.levelHigh":"您已通过实名认证，不可修改",
+          "auth.button": "认证",
+          "auth.identity": "已认证",
+          "auth.IDidentity": "身份认证中",
+          "auth.failureToPass": "未通过认证",
+          "auth.notPass": "未通过",
+          "auth.recertification": "重新认证"
+        },
+        "mobileBound": {
+          "title": "手机绑定",
+          "bind.title": "绑定手机号码",
+          "modify.title": "修改手机号码",
+          "newNumber": "新手机号码",
+          "description.begin":"您已绑定了手机",
+          "description.end":"[您的手机号可以直接用于登录、找回密码等]",
+          "bind.mobile":"绑定手机",
+          "bind.retrievePwd.desc":"绑定的手机号可以直接用于登录、找回密码等",
+          "retrievePwd.desc":"可以用于登录、找回密码等",
+          "button":"已设置",
+          "action.bound":"设置",
+          "action.update":"修改"
+        },
+        "emailBound": {
+          "title": "邮箱绑定",
+          "bind.title": "绑定邮箱",
+          "untie.title": "解绑邮箱",
+          "modify.title": "修改邮箱",
+          "mobileCode":"手机验证码",
+          "email.address": "邮箱地址",
+          "newEmail": "新邮箱地址",
+          "emailCode": "邮箱验证码",
+          "email.required.notnull":"邮箱不能为空",
+          "emailaddress.required.notnull":"邮箱地址不能为空",
+          "emailUntie": "邮箱解绑",
+          "description.begin":"您已绑定了邮箱",
+          "description.end":"[可以用于登录、找回密码等]",
+          "button":"已设置",
+          "action.bound":"设置",
+          "action.upmodify":"不可修改",
+          "action.update":"修改"
+        },
+        "googleBound": {
+          "title": "谷歌验证",
+          "verified": "谷歌认证",
+          "untieGoogle": "谷歌解绑",
+          "QRCodeKeyt": "2,谷歌二维码及密钥",
+          "memo": "增强Google 帐户的安全性.借助两步验证，您可以通过密码和手机为帐户提供双重保护",
+          "bound.yes":"已绑定谷歌验证",
+          "bound.none":"您尚未绑定谷歌验证",
+          "button":"已设置",
+          "google.memo":"1,下载安装谷歌身份验证器",
+          "action.bound":"设置",
+          "secret.key":"密钥",
+          "secret.key.memo":"密钥用于手机更换或遗失时找回谷歌验证器，绑定前请务必将上述密钥备份保存。",
+          "action.update":"解绑"
+        },
+        "idCard": {
+          "hint":"示意",
+          "action.upload":"点击上传",
+          "action.submit":"提交信息",
+          "baseInfo": {
+              "title": "基本信息.",
+              "memo": "为了你的资金安全，需要验证你的身份才可以进行其它操作；认证信息一经验证不能修改，请务必如实填写",
+              "nationality": "国籍",
+              "China": "中国",
+              "IDType": "证件类型",
+              "IDCard": "身份证",
+              "passport": "护照",
+              "name": "姓名",
+              "name.required.notnull": "姓名不能为空",
+              "IDNumber": "证件号码",
+              "enter.IDNumber": "请输入证件号码",
+              "IDNumber.required.notnull": "证件号不能为空"
+          },
+          "uploadID": {
+              "title": "身份证上传.",
+              "memo": "请确保照片的内容完整并清晰可见，仅支持jpg/png/jpeg/bmp图片格式，图片不超过3MB",
+              "uploadCaseOne": {
+                "title": "1.本人身份证正面.",
+                "memosms": "请确保照片的内容完整并清晰可见，仅支持jpg/png/jpeg/bmp图片格式，图片不超过3MB",
+                "action.modify":"修改图片"
+              },
+              "uploadCaseTwo": {
+                "title": "2.本人身份证反面.",
+                "memosms": "请确保照片的内容完整并清晰可见，仅支持jpg/png/jpeg/bmp图片格式，图片不超过3MB"
+              },
+              "uploadCaseThree": {
+                "title": "3.本人手持身份证正面照.",
+                "memosms": "请确保照片的内容完整并清晰可见，仅支持jpg/png/jpeg/bmp图片格式，图片不超过3MB"
+              }
+          }
+        },
+        "EOSWallet": {
+          "bind.wallet": "绑定钱包",
+          "transaction": "去交易",
+          "unbund.wallet": "解绑钱包"
+        },
+        "deviceManage": {
+          "title": "设备管理",
+          "listTab": {
+            "device": "设备",
+            "location": "登录所在地",
+            "active": "最近活跃时间",
+            "ipAddress": "IP地址",
+            "operation": "操作",
+            "delete": "删除设备"
+          }
+        },
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "您的账号是必填项.",
+                    "minlength": "您的账号长度至少要有1个字符",
+                    "maxlength": "您的账号长度不能超过50个字符",
+                    "pattern": "你的账号只能使用小写英文以及数字"
+                }
+            },
+            "success": "<strong>注册成功!</strong> 请检查您的邮箱.",
+            "error": {
+                "fail": "<strong>注册失败!</strong> 请稍后再试.",
+                "userexists": "<strong>账号已被注册!</strong> 请选择其它账号.",
+                "emailexists": "<strong>邮件已经被注册!</strong> 请选择其它邮件."
+            }
+        }
+    }
+}

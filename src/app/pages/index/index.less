@@ -1,0 +1,145 @@
+@color-master: #4F59FA;
+@font-family: 'Microsoft JhengHei';
+#index {
+    background: #FAFAFA;
+    .swiper-container {
+        height: calc(100vh - 20px);
+        position: relative;
+        .swiper-slide {
+            position: relative;
+            height: calc(100vh - 20px);
+            width: 100%;
+            background: url('/assets/images/index/index_bg1.png') no-repeat left top;
+            .swiper-slide__content {
+                position: relative;
+                height: 100%;
+                width: 80%;
+                margin: auto;
+                .swiper-slide__inner {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    color: #f1f5ff;
+                    height: 50%;
+                    h1 {
+                        font-size: .45rem;
+                        font-weight: 100;
+                        margin: .2rem 0;
+                        letter-spacing: .01rem;
+                        font-family: @font-family;
+                    }
+                    p {
+                        margin: 4px 0;
+                        font-size: .14rem;
+                        font-weight: 100;
+                        letter-spacing: 1px;
+                    }
+                    >button {
+                        position: relative;
+                        margin-top: 60px;
+                        padding: 14px 80px 14px 40px;
+                        background: #fff;
+                        border-radius: 50px;
+                        color: #151181;
+                        font-size: .13rem;
+                        .download {
+                            position: absolute;
+                            top: 6px;
+                            right: 4px;
+                            border-radius: 50%;
+                            width: 32px;
+                            height: 32px;
+                            line-height: 32px;
+                            display: block;
+                            background: #e7e7f2;
+                            i {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .sub-title {
+                        margin-top: .3rem;
+                    }
+                }
+                .swiper-slide__phone {
+                    position: absolute;
+                    right: 0;
+                    top: 10%;
+                    max-width: 450px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .swiper-pagination{
+            bottom: 52px;
+            .swiper-pagination-bullet{
+                margin: 0 10px;
+                padding: 0 20px;
+                height: 4px;
+                background: #fff;
+                border-radius: 1px;
+            }
+            .swiper-pagination-bullet-active{
+                background: #fff;
+            }
+        }
+    }
+    .news {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(25, 40, 120, 0.5);
+        height: 39px;
+        overflow: hidden;
+        z-index: 999;
+        .new-body {
+            .new-item {
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                margin: auto;
+                li {
+                    display: inline-block;
+                    color: #f1f5ff;
+                    width: 33.33%;
+                    padding: .1rem .16rem;
+                    transition: all .3s linear; // border-left: 1px solid #3f3f3f;
+                    a {
+                        margin: 0;
+                        margin-right: .2rem;
+                        font-size: .13rem;
+                        font-weight: normal;
+                        color: #fff;
+                        &:hover {
+                            color: #4d83ff;
+                            text-decoration: underline;
+                        }
+                    }
+                    p {
+                        font-size: .12rem;
+                        margin-bottom: 0;
+                        margin-top: .06rem;
+                        color: #bcbcbc;
+                    }
+                    span {
+                        font-weight: 300;
+                        margin-top: 2px;
+                        font-size: .13rem;
+                    }
+                    i {
+                        font-size: 16px;
+                        vertical-align: middle;
+                    } // &:hover {
+                    //     background: rgba(0, 0, 0, .7);
+                    // }
+                }
+            }
+        }
+    }
+
+}

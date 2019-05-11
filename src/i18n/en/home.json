@@ -1,0 +1,12 @@
+{
+    "home": {
+        "title": "Home | Website Name",
+        "action.obtain":"Get BUSD",
+        "action.timely":"Trade on xxx",
+        "action.taste":"Experience Now",
+        "action.register":"Register",
+        "subtitle": "Main Page",
+        "more": "More...",
+        "mobile.required.notnull":"Phone number cannot be blank"
+    }
+}

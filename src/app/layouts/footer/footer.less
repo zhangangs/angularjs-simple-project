@@ -1,0 +1,78 @@
+@font-family: 'Microsoft JhengHei';
+.footer {
+    overflow: hidden;
+    clear: both;
+    transition: all .3s linear;
+    .footer-body {
+        background: #151181;
+        .footer-item {
+            padding:.6rem 0;
+            display: flex;
+            width: 84%;
+            margin: auto;
+            .footer-info {
+                width: 40%;
+                >img {
+                    max-height: 25px;
+                }
+                .footer-form {
+                    margin-top: .4rem;
+                    >p {
+                        font-size: .13rem;
+                        color: #DDDDF3;
+                    }
+                    .form-control {
+                        padding: .2rem .12rem;
+                        background: #332EA8;
+                        border-color: #332EA8;
+                        font-size: .13rem;
+                        color: #fff;
+                    }
+                    .input-group {
+                        margin-top: .14rem;
+                        max-width: 300px;
+                    }
+                    .input-group-addon {
+                        padding-left: .2rem;
+                        padding-right: .2rem;
+                        background: #7B76ED;
+                        border-color: #7B76ED;
+                        color: #fff;
+                        font-size: .13rem;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .footer-list {
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+                li {
+                    b {
+                        color: #fff;
+                        font-size: .14rem;
+                        font-weight: 400;
+                    }
+                    a {
+                        display: block;
+                        color: #dfe4ff;
+                        font-size: .12rem;
+                        margin: .2rem 0;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+        >p {
+            text-align: center;
+            margin: 0;
+            padding: .18rem;
+            background: #fff;
+            font-family: @font-family;
+            color: #404040;
+            font-size: .13rem;
+        }
+    } 
+}

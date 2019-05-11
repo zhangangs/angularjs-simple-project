@@ -1,0 +1,18 @@
+<div class="pagesbox">
+	<ul class="page-list" id="pagination">
+		<li ng-click="vm.page.prve()" ng-class="{'disabled':vm.page.currentPage == 1}">
+			<span>
+				<i class="iconfont icon-sarrow-left"></i>
+			</span>
+		</li>
+		<li ng-class="{'active':vm.page.currentPage == $index + 1}" ng-repeat="page in vm.page.pageSizeArray track by $index"
+		 ng-click="vm.page.pageChanged($index + 1)">
+			<a>{{$index + 1}}</a>
+		</li>
+		<li ng-click="vm.page.next()" ng-class="{'disabled':vm.page.currentPage == vm.page.pageSize}">
+			<span class="page-nextspan">
+				<i class="iconfont icon-sarrow-right"></i>
+			</span>
+		</li>
+	</ul>
+</div>

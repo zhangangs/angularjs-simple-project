@@ -1,0 +1,63 @@
+{
+    "register": {
+        "title": "Register | Website Name",
+        "mobile": "Register via phone",
+        "mailbox": "E-mail",
+        "email": "Register via email",
+        "memo": "Already have an account?",
+        "email.required.notnull": "Email cannot be blank",
+        "email.error": "E-mail format is incorrect",
+        "email.registered": "E-mail is aready registered",
+        "toLogin": "Click to login",
+        "formMobile": {
+            "mobile": "Phone Number",
+            "mobile.placeholder":"phone number",
+            "mobile.required.notnull":"phone number cannot be empty",
+            "mobile.required.error":"phone number error",
+            "mobile.required.exist":"The phone number already exists",
+            "mobile.required.correct":"Enter the correct phone number",
+            "captchacode":"Captcha Code",
+            "captchacode.placeholder":"captcha code",
+            "entry.captchacode":"Enter the 4-digit Captcha text",
+            "captchacode.required.notnull":"The captcha cannot be empty",
+            "captchacode.required.error":"Captcha code error",
+            "sms":"Sms Code",
+            "emailcode":"Email Code",
+            "sms.required.notnull":"SMS Code cannot be blank",
+            "entry.mobilecode":"Enter 6-digit SMS code",
+            "sendSms":"Send Code",
+            "resend":"Send Again",
+            "sms.placeholder":"sms code",
+            "password":"Password",
+            "password.placeholder":"password",
+            "password.required.notnull":"Password cannot be blank",
+            "password.required":"Enter 8-16 characters, including uppercase letter, lowercase letter and number",
+            "password.required.unify":"The two passwords are different.",
+            "confirmPassword":"Comfirm Password",
+            "run.environment":"<p>Please note that verification emails may be misclassified as spam.</p><p>Please properly keep your account and login password.</p><p>Identity information cannot be modified after verification, please confirm carefully.</p><p>Plaese do not use the same login password as other websites.</p>",
+            "confirmPassword.placeholder":"comfirm password",
+            "inviteCode":"Invitation code(optional)",
+            "inviteCode.placeholder":"invitation Code",
+            "comfirm":" I agree to the",
+            "agreement":"< User Agreement >",
+            "Privacy.clause":"< Privacy Policy >"
+        },
+        "submit":"Sign Up",
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "Your username is required.",
+                    "minlength": "Your username is required to be at least 1 character.",
+                    "maxlength": "Your username cannot be longer than 50 characters.",
+                    "pattern": "Your username can only contain letters and digits."
+                }
+            },
+            "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
+            "error": {
+                "fail": "<strong>Registration failed!</strong> Please try again later.",
+                "userexists": "<strong>Login name already registered!</strong> Please choose another one.",
+                "emailexists": "<strong>Email is already in use!</strong> Please choose another one."
+            }
+        }
+    }
+}

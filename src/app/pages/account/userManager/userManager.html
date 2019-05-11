@@ -1,0 +1,550 @@
+<div class="cyde-container userManager">
+  <div class="cf-row">
+    <div class="cyde-module">
+      <div class="module-title" data-translate="userInfo.baseInfo"><span><b></b>Base UserInfo</span></div>
+      <div class="module-body cyde-flex3">
+        <dl class="baseinfo-left">
+          <!-- <dt>
+            <span>
+              <i class="iconfont icon-busd"></i>
+              <img src="assets/images/baseinfo.png" alt="">
+            </span>
+          </dt> -->
+          <dd>
+            <!-- <h5>Good Morning！</h5> -->
+            <h4>{{vm.userInfo.userNameFormat}}
+              <a class="rz-btn" ng-if="vm.userInfo.l2AuthStatus == '4'" data-translate="userInfo.unauthorized"></a>
+              <a class="rz-btn" ng-if="vm.userInfo.l2AuthStatus == '2'"
+                data-translate="userInfo.userAuth.auth.identity"></a>
+              <a class="rz-btn" ng-if="vm.userInfo.l2AuthStatus == '1'" data-translate="userInfo.identification"></a>
+              <a class="rz-btn" ng-if="vm.userInfo.l2AuthStatus == '0'"
+                data-translate="userInfo.userAuth.auth.notPass"></a>
+
+              <!-- <a class="rz-btn" ng-if="vm.userInfo.realAuthLevel == '0'" data-translate="userInfo.unauthorized"></a>
+              <a class="rz-btn" ng-if="vm.userInfo.realAuthLevel == '1'" data-translate="userInfo.identification"></a>
+              <a class="rz-btn" ng-if="vm.userInfo.realAuthLevel == '2'" data-translate="userInfo.certification"></a> -->
+            </h4>
+            <p><span data-translate="userInfo.lastLoginTime">Last Login
+                Time</span>：{{vm.recentLoginHistory[0].loginTime}}</p>
+            <p>
+              IP：{{vm.recentLoginHistory[0].loginIP}}
+              <span ng-if="vm.recentLoginHistory[0].loginRegion">（{{vm.recentLoginHistory[0].loginRegion}}）</span>
+            </p>
+          </dd>
+        </dl>
+        <div class="baseinfo-mid">
+          <ul class="accountinfo">
+            <li>
+              <h5 data-translate="userInfo.account">account</h5>
+              <p>{{vm.userInfo.userName}}</p>
+            </li>
+            <li>
+              <h5 data-translate="userInfo.nickname">nickname</h5>
+              <p>{{vm.userInfo.userName}}</p>
+              <!-- <span><i class="iconfont icon-edit"></i> 修改</span> -->
+            </li>
+            <li>
+              <h5 data-translate="userInfo.invite">Invite Code</h5>
+              <p>{{vm.userInfo.inviteCode}}</p>
+              <span ng-click="vm.copyInviteCode()"><i class="iconfont icon-copy"></i>
+                <b data-translate="userInfo.inviteCopy">copy</b>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="baseinfo-right">
+          <div class="bindaccount">
+            <h5 data-translate="userInfo.boundAccount">boundAccount</h5>
+            <ul class="bindaccount-list">
+              <li ng-class="{'current':vm.userInfo.isGoogleAuthCertified}" title="谷歌">
+                <span>
+                  <i class="iconfont icon-googleplus"></i>
+                </span>
+              </li>
+              <li class="cutline"></li>
+              <li ng-class="{'current':vm.userInfo.isMobileCertified}" title="手机">
+                <span>
+                  <i class="iconfont icon-phone"></i>
+                </span>
+              </li>
+              <!-- <li ng-if="vm.userInfo.isMobileCertified" class="cutline"></li> -->
+              <li class="cutline"></li>
+              <li ng-class="{'current':vm.userInfo.isEmailCertified}" title="邮箱">
+                <span>
+                  <i class="iconfont icon-email"></i>
+                </span>
+              </li>
+              <li class="cutline"></li>
+              <li ng-class="{'current':vm.userInfo.l2AuthStatus == '2'}"
+                title="{{'userInfo.certification' |translate}}">
+                <span>
+                  <i class="iconfont icon-id"></i>
+                  <!-- <b class="iconfont icon-soliddelete"></b> -->
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cyde-module cyde-module__nopadding">
+      <div class="module-body">
+        <table class="validate-table table-high190">
+          <tbody>
+            <tr>
+              <th width="20%"><b class="sign"><i class="iconfont icon-loginpwd"></i></b><span class="sign-txt"
+                  data-translate="userInfo.loginPass.password"></span></th>
+              <td width="50%">
+                <p data-translate="userInfo.loginPass.password.memo">
+
+                </p>
+              </td>
+              <td width="30%">
+                <a class="selected" ng-if="vm.userInfo.isMobileCertified"><i class="iconfont icon-complete"></i>
+                  <c data-translate="userInfo.mobileBound.button"></c>
+                </a>
+                <b class="cutline" ng-if="vm.userInfo.isMobileCertified"></b>
+                <a ng-click="vm.showUpdatePassword()" data-translate="userInfo.loginPass.button"></a>
+              </td>
+            </tr>
+            <tr>
+              <th width="20%"><b class="sign"><i class="iconfont icon-phone"></i></b><span class="sign-txt"
+                  data-translate="userInfo.mobileBound.title"></span></th>
+              <td width="50%">
+                <p ng-if="vm.userInfo.isMobileCertified">
+                  <span data-translate="userInfo.mobileBound.description.begin">Your phone has been
+                    authenticated</span>{{vm.userInfo.mobileFormat}}
+                  <span data-translate="userInfo.mobileBound.description.end">[Your phone number can be used
+                    directly for login, password retrieval]</span>
+                </p>
+                <p ng-if="!vm.userInfo.isMobileCertified" data-translate="userInfo.mobileBound.bind.retrievePwd.desc">
+                </p>
+              </td>
+              <td width="30%">
+                <a class="selected" ng-if="vm.userInfo.isMobileCertified"><i class="iconfont icon-complete"></i>
+                  <c data-translate="userInfo.mobileBound.button">Completed</c>
+                </a>
+                <b class="cutline" ng-if="vm.userInfo.isMobileCertified"></b>
+                <a ng-click="vm.showChangeMobileModal(1)" data-translate="userInfo.mobileBound.action.update"
+                  ng-if="vm.userInfo.isMobileCertified">update</a>
+                <a href="" ng-if="!vm.userInfo.isMobileCertified" ng-click="vm.showChangeMobileModal(0)">
+                  <c data-translate="userInfo.mobileBound.bind.mobile"></c>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th width="20%"><b class="sign"><i class="iconfont icon-email"></i></b><span class="sign-txt"
+                  data-translate="userInfo.emailBound.title"></span></th>
+              <td width="50%">
+                <p ng-if="vm.userInfo.isEmailCertified">
+                  <span data-translate="userInfo.emailBound.description.begin">Your Email has been authenticated</span>
+                  {{vm.userInfo.emailFormat}}
+                  <span data-translate="userInfo.emailBound.description.end">
+                    [Can be used for login, password retrieval]</span>
+                </p>
+                <p ng-if="!vm.userInfo.isEmailCertified" data-translate="userInfo.mobileBound.retrievePwd.desc">
+                </p>
+              </td>
+              <td width="30%">
+                <div ng-if="vm.userInfo.isEmailCertified">
+                  <a class="selected">
+                    <i class="iconfont icon-complete"></i>
+                    <b data-translate="userInfo.emailBound.button"></b>
+                  </a>
+                  <b class="cutline"></b>
+                  <a ng-click="vm.showUnBindEmailModal()" ng-if="vm.userInfo.registerType == '1'"
+                    data-translate="userInfo.emailBound.emailUntie"></a>
+                  <span ng-if="vm.userInfo.registerType == '2'"
+                    data-translate="userInfo.emailBound.action.upmodify"></span>
+                </div>
+
+                <div ng-if="!vm.userInfo.isEmailCertified">
+                  <a href="" ng-click="vm.showChangeEmailModal(0)" data-translate="userInfo.emailBound.bind.title"></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th width="20%"><b class="sign"><i class="iconfont icon-id"></i></b><span class="sign-txt"
+                  data-translate="userInfo.userAuth.title"></span></th>
+              <td width="50%">
+                <p ng-if="vm.userInfo.l2AuthStatus == '0'" data-translate="userInfo.userAuth.auth.none"></p>
+                <!-- <p ng-if="vm.userInfo.l2AuthStatus == '1'" data-translate="userInfo.userAuth.auth.levelLow"></p> -->
+                <p ng-if="vm.userInfo.l2AuthStatus == '1'" data-translate="userInfo.userAuth.auth.none"></p>
+                <p ng-if="vm.userInfo.l2AuthStatus == '2'" data-translate="userInfo.userAuth.auth.levelHigh"
+                  class="unmodify"></p>
+                <p ng-if="vm.userInfo.l2AuthStatus == '4'" data-translate="userInfo.userAuth.auth.none"></p>
+              </td>
+              <td width="30%">
+                <a ng-if="vm.userInfo.l2AuthStatus == '4'" ui-sref="idCard"
+                  data-translate="userInfo.userAuth.auth.button">
+
+                </a>
+                <a ng-if="vm.userInfo.l2AuthStatus == '2'" class="selected">
+                  <i class="iconfont icon-complete"></i>
+                  <b data-translate="userInfo.userAuth.auth.identity"></b>
+                </a>
+                <a href="" ng-if="vm.userInfo.l2AuthStatus == '1'"
+                  data-translate="userInfo.userAuth.auth.IDidentity"></a>
+                <span ng-if="vm.userInfo.l2AuthStatus == '0'">
+                  {{'userInfo.userAuth.auth.failureToPass' |translate}} |
+                  <a href="" ui-sref="idCard({isFinish:false})" data-translate="userInfo.userAuth.auth.recertification">
+
+                  </a>
+                </span>
+
+                <!-- <b class="cutline" ng-if="vm.userInfo.isMobileCertified"></b> -->
+                <!-- <a ng-click="vm.showUpdatePassword()" data-translate="userInfo.loginPass.button"></a> -->
+              </td>
+            </tr>
+            <tr>
+              <th width="20%"><b class="sign"><i class="iconfont icon-googleplus"></i></b><span class="sign-txt"
+                  data-translate="userInfo.googleBound.title"></span></th>
+              <td width="50%">
+                <p ng-if="!vm.userInfo.isGoogleAuthCertified" data-translate="userInfo.googleBound.memo">Enhance
+                  account security. With two-step authentication, you can double protect accounts with passwords
+                  and mobile phones</p>
+                <p ng-if="vm.userInfo.isGoogleAuthCertified" data-translate="userInfo.googleBound.bound.yes">Your
+                  google has been authenticated</p>
+              </td>
+              <td width="30%">
+                <div ng-if="vm.userInfo.isGoogleAuthCertified">
+                  <span>
+                    <a class="selected"><i class="iconfont icon-complete"></i>
+                      <c data-translate="userInfo.googleBound.button">Completed</c>
+                    </a>
+                  </span>
+                  <b class="cutline"></b>
+                  <a ng-click="vm.showUnBindGoogleAuthCertified()"
+                    data-translate="userInfo.googleBound.action.update"></a>
+                </div>
+
+                <a ng-if="!vm.userInfo.isGoogleAuthCertified" href="" ng-click="vm.showGoogleAuthCertified()"
+                  data-translate="userInfo.googleBound.action.bound"></a>
+              </td>
+            </tr>
+
+            <!-- 收款方式 -->
+            <tr>
+              <th width="20%">
+                <b class="sign">
+                  <i class="iconfont icon-paymentmethod"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.payment.method">收款方式</span>
+              </th>
+              <td width="50%">
+                <p data-translate="userInfo.set.payment"> 设置你的收款方式</p>
+              </td>
+              <td width="30%">
+                <a ng-click="vm.isOpen = !vm.isOpen" data-translate="userInfo.mobileBound.action.bound">设置</a>
+              </td>
+            </tr>
+            <!-- 银行卡已设置 -->
+            <tr ng-if="vm.isOpen && vm.detailInfo.isBankCardSet == 1" class="dropdown">
+              <th width="20%">
+                <b class="sign sign-left">
+                  <i class="iconfont icon-bankcard"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.bankCard.accounts">银行卡转账</span>
+              </th>
+              <td width="50%">
+                <p>
+                  {{'userInfo.bankCard.set' |translate}}：{{vm.detailInfo.bankCard}}, {{'userInfo.payee'
+                  |translate}}：{{vm.detailInfo.bankUserPayName}}， {{'userInfo.opening.bank'
+                  |translate}}：{{vm.detailInfo.bankName}}
+                </p>
+              </td>
+              <td width="30%">
+                <a ng-click="vm.showAccountSettingModal(1)" data-translate="userInfo.loginPass.button"> 修改 </a>
+              </td>
+            </tr>
+            <!-- 银行卡已设置 -->
+
+            <!-- 银行卡未设置 -->
+            <tr ng-if="vm.isOpen && vm.isOpen && vm.detailInfo.isBankCardSet == 0" class="dropdown">
+              <th width="20%">
+                <b class="sign sign-left">
+                  <i class="iconfont icon-bankcard"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.bankCard.accounts">银行卡转账</span>
+              </th>
+              <td width="50%">
+                <p data-translate="userInfo.unseting">暂未设置</p>
+              </td>
+              <td width="30%">
+                <a ng-click="vm.showAccountSettingModal(1)" data-translate="userInfo.mobileBound.action.bound"> 设置 </a>
+              </td>
+            </tr>
+            <!-- 银行卡未设置 -->
+
+            <!-- 支付宝已设置 -->
+            <tr ng-if="vm.isOpen && vm.detailInfo.isAlipaySet == 1" class="dropdown">
+              <th width="20%">
+                <b class="sign sign-left">
+                  <i class="iconfont icon-alipay"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.alipay.account">支付宝账号</span>
+              </th>
+              <td width="50%">
+                <p>
+                  {{'userInfo.account.set' |translate}}：{{vm.detailInfo.alipayUserPayID}}, {{'userInfo.bankCard.name'
+                  |translate}}：{{vm.detailInfo.alipayUserName}}
+                  <a href="" ng-click="vm.showBigPic(vm.detailInfo.alipayPayCRCodePhoto)"
+                    data-translate="userInfo.payment.code">收款码</a>
+                </p>
+              </td>
+              <td width="30%">
+                <a ng-click="vm.showAccountSettingModal(3)" data-translate="userInfo.loginPass.button"> 修改 </a>
+              </td>
+            </tr>
+            <!-- 支付宝已设置 -->
+
+            <!-- 支付宝未设置 -->
+            <tr ng-if="vm.isOpen && vm.detailInfo.isAlipaySet == 0" class="dropdown">
+              <th width="20%">
+                <b class="sign sign-left">
+                  <i class="iconfont icon-alipay"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.alipay.account">支付宝账号</span>
+              </th>
+              <td width="50%">
+                <p data-translate="userInfo.account.unuse">账号未设置</p>
+              </td>
+              <td width="30%">
+                <a ng-click="vm.showAccountSettingModal(3)" data-translate="userInfo.mobileBound.action.bound"> 设置 </a>
+              </td>
+            </tr>
+            <!-- 支付宝未设置 -->
+
+            <!-- 微信已设置 -->
+            <tr ng-if="vm.isOpen && vm.detailInfo.isWechatSet == 1" class="dropdown">
+              <th width="20%">
+                <b class="sign sign-left">
+                  <i class="iconfont icon-wechatpay"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.weChat.account">微信账号</span>
+              </th>
+              <td width="50%">
+                <p>
+                  {{'userInfo.account.set' |translate}}：{{vm.detailInfo.wechatUserPayID}}, {{'userInfo.bankCard.name'
+                  |translate}}：{{vm.detailInfo.wechatUserName}}
+                  <a href="" ng-click="vm.showBigPic(vm.detailInfo.wetchatPayCRCodePhoto)"
+                    data-translate="userInfo.payment.code">收款码</a>
+                </p>
+              </td>
+              <td width="30%">
+                <a ng-click="vm.showAccountSettingModal(2)" data-translate="userInfo.loginPass.button"> 修改 </a>
+              </td>
+            </tr>
+            <!-- 微信已设置 -->
+
+            <!-- 微信未设置 -->
+            <tr ng-if="vm.isOpen && vm.detailInfo.isWechatSet == 0" class="dropdown">
+              <th width="20%">
+                <b class="sign sign-left">
+                  <i class="iconfont icon-wechatpay"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.weChat.account">微信账号</span>
+              </th>
+              <td width="50%">
+                <p data-translate="userInfo.unseting">暂未设置</p>
+              </td>
+              <td width="30%">
+                <a ng-click="vm.showAccountSettingModal(2)" data-translate="userInfo.mobileBound.action.bound"> 设置 </a>
+              </td>
+            </tr>
+            <!-- 微信未设置 -->
+
+            <!-- 收款方式 -->
+
+            <!-- ScatterJS 钱包 -->
+            <!-- <tr ng-controller="WalletController as vm"> -->
+            <tr>
+              <th width="20%">
+                <b class="sign">
+                  <i class="iconfont icon-EOSwallet"></i>
+                </b>
+                <span class="sign-txt" data-translate="userInfo.wallet.eos">EOS 钱包</span>
+              </th>
+              <td width="50%">
+                <p data-translate="userInfo.wallet.eos.memo">EOS 钱包去中心化交易，自主冲、提币</p>
+                <!-- 未登录 -->
+                <!-- <p data-translate="userInfo.wallet.eos.memo" ng-if="!vm.data.isIdentity">EOS 钱包去中心化交易，自主冲、提币</p> -->
+                <!-- 未登录 -->
+
+                <!-- 已登录 2019/1/28 取消掉这个效果，转到scatter钱包页面 -->
+                <!-- <ul class="wallet-list" ng-if="vm.data.isIdentity">
+                  <li>
+                    {{vm.data.account.account_name}}
+                    <p>
+                      <span>余额：</span>
+                      {{vm.data.account.core_liquid_balance}}</p>
+                  </li>
+                  <li>
+                    内存使用量
+                    <p> {{vm.data.account.ramUsageFormat}}  / {{vm.data.account.ramQuotaFormat}} </p>
+                  </li>
+                  <li>
+                    计算资源使用量
+                    <p>{{vm.data.account.cpu_limit.usedFormat}}  / {{vm.data.account.cpu_limit.maxFormat}} </p>
+                  </li>
+                  <li>
+                    网络资源使用量
+                    <p>{{vm.data.account.net_limit.usedFormat}}  / {{vm.data.account.net_limit.maxFormat}} </p>
+                  </li>
+                </ul> -->
+                <!-- 已登录 -->
+              </td>
+              <td width="30%">
+                <a ng-click="vm.method.loginScatter(true)" ng-if="!vm.data.isIdentity"
+                  data-translate="userInfo.EOSWallet.bind.wallet">绑定钱包</a>
+                <!-- <a class="btn btn-default" ui-sref="dex-market" ng-if="vm.data.isIdentity" data-translate="userInfo.EOSWallet.transaction">去交易</a>
+                <a ng-click="vm.method.logoutScatter()" ng-if="vm.data.isIdentity" data-translate="userInfo.EOSWallet.unbund.wallet">解绑钱包</a> -->
+                <div ng-if="vm.data.isIdentity">
+                  <span>
+                    <a href="" class="selected">
+                      <i class="iconfont icon-complete"></i>
+                      <c>已设置</c>
+                    </a>
+                  </span>
+                  <b class="cutline"></b>
+                  <a href="" ng-click="vm.method.logoutScatter()"
+                    data-translate="userInfo.EOSWallet.unbund.wallet">解绑</a>
+                  <b class="cutline"></b>
+                  <a href="" ui-sref="dex-market" data-translate="userInfo.EOSWallet.transaction">去交易</a>
+                </div>
+              </td>
+            </tr>
+            <!-- ScatterJS 钱包 -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="cyde-module">
+      <div class="module-title" data-translate="userInfo.deviceManage.title">
+        <!-- <ul class="module-pages" style="display: none">
+          <li><a class="upgray"><i class="iconfont icon-cirarrow-left"></i></a></li>
+          <li><b>1</b><b>/</b><b>5</b></li>
+          <li><a><i class="iconfont icon-cirarrow-right"></i></a></li>
+        </ul> -->
+        <!-- <span><b></b>
+          <c data-translate="userInfo.deviceManage.title">deviceManage</c>
+        </span> -->
+
+      </div>
+      <div class="module-body">
+        <table class="ordinary-table devicemanagetable">
+          <thead>
+            <tr>
+              <th width="20%" data-translate="userInfo.deviceManage.listTab.device"></th>
+              <th width="20%" data-translate="userInfo.deviceManage.listTab.location"></th>
+              <th width="20%" data-translate="userInfo.deviceManage.listTab.active"></th>
+              <th width="20%" data-translate="userInfo.deviceManage.listTab.ipAddress"></th>
+              <th width="20%" data-translate="userInfo.deviceManage.listTab.operation"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="device in vm.deviceList | orderBy:'loginTime':'DESC'">
+              <td>{{device.deviceName}}</td>
+              <td>{{device.ipLocation}}</td>
+              <td>{{device.loginTime}}</td>
+              <td>{{device.ipAddress}}</td>
+              <td>
+                <i class="glyphicon glyphicon-trash"></i>
+                <a data-translate="userInfo.deviceManage.listTab.delete"
+                  ng-click="vm.deleteDeviceInfo(device.deviceName)"></a>
+              </td>
+            </tr>
+            <tr ng-if="vm.deviceList.length==0 && !vm.deviceListEmpty">
+              <td colspan="5">
+                <div class="cyde-data__loading">
+                  <img src="assets/images/icon_loading.png">
+                  <div class="loading-bar">
+                    <p></p>
+                  </div>
+                  <p data-translate="userInfo.loading"></p>
+                </div>
+              </td>
+            </tr>
+            <tr ng-if="vm.deviceList.length==0 && vm.deviceListEmpty">
+              <td colspan="5">
+                <div class="cyde-data__empty">
+                  <i class="iconfont icon-nodata"></i>
+                  <p data-translate="userInfo.noData"></p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cyde-flex2" style="display:none">
+      <div class="records-left">
+        <div class="cyde-module">
+          <div class="module-title">
+            <!-- <ul class="module-pages">
+              <li><a class="upgray"><i class="iconfont icon-cirarrow-left"></i></a></li>
+              <li><b>1</b><b>/</b><b>5</b></li>
+              <li><a><i class="iconfont icon-cirarrow-right"></i></a></li>
+            </ul> -->
+            <span><b></b>登录历史</span>
+          </div>
+          <div class="module-body">
+            <table class="ordinary-table">
+              <thead>
+                <tr>
+                  <th width="25%">登录时间</th>
+                  <th width="25%">登录地点</th>
+                  <th width="25%">IP地址</th>
+                  <th width="25%">设备</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="history in vm.recentLoginHistory">
+                  <td>{{history.loginTime}}</td>
+                  <td>{{history.loginRegion}}</td>
+                  <td>{{history.loginIP}}</td>
+                  <td>
+                    <span ng-if="history.loginTerminal == '0'">web端</span>
+                    <span ng-if="history.loginTerminal == '1'">android</span>
+                    <span ng-if="history.loginTerminal == '2'">ios</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="records-right">
+        <div class="cyde-module">
+          <div class="module-title">
+            <ul class="module-pages">
+              <li><a class="upgray"><i class="iconfont icon-cirarrow-left"></i></a></li>
+              <li><b>1</b><b>/</b><b>5</b></li>
+              <li><a><i class="iconfont icon-cirarrow-right"></i></a></li>
+            </ul>
+            <span><b></b>分发记录</span>
+          </div>
+          <div class="module-body">
+            <table class="ordinary-table">
+              <thead>
+                <tr>
+                  <th width="25%">登录时间</th>
+                  <th width="25%">登录地点</th>
+                  <th width="25%">IP地址</th>
+                  <th width="25%">状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4"><span class="norecord">你暂无分发记录</span></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

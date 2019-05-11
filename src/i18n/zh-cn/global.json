@@ -1,0 +1,100 @@
+{
+    "global": {
+        "title": "网站名称",
+        "mymessage": "我的消息",
+        "browsehappy": "您目前使用<strong>过于老旧</strong>的浏览器, 建议您<a href=\"http://browsehappy.com/?locale=en\">升级浏览器</a>让您有更佳的上网体验.",
+        "menu": {
+            "home": "首页",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "数据",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "navbar": {
+                "legal.orders": "法币订单",
+                "mycoin": "我的coin",
+                "hour.coin": "1小时上币",
+                "dex.exchange": "DEX交易",
+                "what.memo": "什么是BUSD?"
+            },
+            "account": {
+                "main": "账号",
+                "settings": "设置",
+                "password": "密码",
+                "sessions": "会话",
+                "login": "登录",
+                "logout": "退出登录",
+                "register": "注册",
+                "userInfo":"个人中心",
+                "accountSetting":"账户设置"
+            },
+
+            "language": "语言",
+            "exchange": "xxxxx",
+            "OTC": "标题二",
+            "balances": {
+                "title": "资产",
+                "myBalance":"资产管理",
+                "messages": {
+                    "error": {
+                        "authentication": "<strong>获取数据失败!</strong> 请稍后重试."
+                    }
+                }
+            },
+            "orders": {
+                "title": "订单",
+                "order":"当前委托",
+                "history":"委托历史",
+                "transaction":"正在委托",
+                "messages": {
+                    "error": {
+                        "authentication": "<strong>获取数据失败!</strong> 请稍后重试."
+                    }
+                }
+            }
+        }
+  
+    },
+    
+   
+    "footer": {
+        "tradeCenter": "全球领先的数字资产交易中心",
+        "exchange": "网站名称",
+        "QRCode": "扫描关注更多最新信息",
+        "secureDigital": "加密数字",
+        "ourServices": {
+            "main": "服务",
+            "ecology0": "生态系统",
+            "ecology1": "帮助计划",
+            "institution": " 机构",
+            "capital": " 资本"
+        }, 
+        "tool": {
+            "main": "工具",
+            "client": "客户端下载",
+            "helpCenter": "帮助中心",
+            "help": "帮助",
+            "document0": "APP下载",
+            "document1": "API文档",
+            "document2": "费率",
+            "asset": "数字资产介绍"
+        }, 
+        "aboutUs": {
+            "main": "关于我们",
+            "group": " 集团",
+            "contactUs": "联系我们",
+            "join0": "加入我们",
+            "join1": "社群服务",
+            "join2": "用户协议",
+            "notice": "公告"
+        }, 
+        "stipulation": {
+            "main": "条款说明",
+            "protoco0": "风险披露说明",
+            "protoco1": "反洗钱策略",
+            "protoco2": "隐私条款",
+            "legal": "法律声明",
+            "rate": "费率"
+        }
+    }
+}

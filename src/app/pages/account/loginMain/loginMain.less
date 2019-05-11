@@ -1,0 +1,154 @@
+@color-master: #4d83ff;
+#loginMain {
+    margin: auto 18% 4%;
+    padding-top: 4%;
+    .register-title {
+        color: #333;
+        font-size: 24px;
+    }
+    .register-p {
+        font-size: 16px;
+        color: #878787;
+        margin-top: 15px;
+    }
+    .content {
+        -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        position: relative;
+    }
+    .content__left {
+        padding: 30px 60px;
+        width: 55%;
+    }
+    .logininfo-text {
+        line-height: 30px;
+        font-size: 13px;
+    }
+    .content__right {
+        color: #fff;
+        background: #000;
+        position: absolute;
+        width: 250px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background: url('/assets/images/login_bg.png') left bottom no-repeat;
+        padding: .3rem 30px;
+        .btn-register {
+            color: #fff;
+            background: none;
+            border: 1px solid #fff;
+            // position: relative;
+            width: 150px;
+            height: 42px;
+            text-align: left;
+            position: absolute;
+            bottom: 60px;
+            i {
+                transition: all .3s linear;
+                position: absolute;
+                right: 20px;
+                top: 54%;
+                margin-top: -14px;
+                font-size: 20px;
+            }
+            &:hover {
+                i {
+                    right: 10px;
+                }
+            }
+        }
+        .unaccount-title {
+            font-size: 24px;
+            margin-top: 13px;
+            margin-bottom: 50px;
+        }
+    }
+    .navbarbox {
+        .form-group {
+            margin: 30px 0;
+            position: relative;
+            .forgetpassword-text {
+                position: absolute;
+                right: -110px;
+                bottom: 7px;
+                width: 100px;
+                font-size: 13px;
+            }
+        }
+        label {
+            color: #333;
+            font-weight: normal;
+        }
+        .form-control {
+            height: 44px;
+            border-color: #EDECEF;
+            transition: all .3s linear;
+            outline: none;
+            &:hover,
+            &:focus {
+                border-color: @color-master;
+            }
+        }
+        a {
+            color: @color-master;
+            &:hover,
+            &:focus {
+                color: @color-master;
+            }
+        }
+        .btn-submit {
+            background: @color-master; // width: 250px;
+            border: 1px solid @color-master; // height: 44px;
+            color: #fff; // text-align: left;
+            padding: .14rem 1rem;
+            position: relative;
+            // margin-top: 10px;
+            border-radius: 3px;
+            transition: all .3s linear;
+            width: 100%;
+            i {
+                transition: all .3s linear;
+                position: absolute;
+                right: 30px;
+                top: 50%;
+                margin-top: -13px;
+                font-size: 20px;
+            }
+            &:hover {
+                // background: #fff;
+                // border: 1px solid @color-master;
+                // color: @color-master;
+                // i {
+                //     right: 20px;
+                // }
+                opacity: .9;
+            }
+        }
+        input.has-error {
+            border-color: red;
+        }
+        label.has-error {
+            color: red;
+        }
+    }
+    .forgetpas {
+        display: -webkit-flex;
+        /* Safari */
+        display: flex;
+        justify-content: space-between;
+        .remember {
+            input {
+                position: relative;
+                top: 1px;
+                margin-right: 2px;
+            }
+        }
+        .forgetpassword-text {
+            position: relative;
+            top: 3px;
+        }
+    }
+}
