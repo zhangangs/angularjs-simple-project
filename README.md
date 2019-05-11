@@ -8,39 +8,49 @@
 controller、html、css、state都放到对应的文件夹下面。(在原来的设想中images也是拆分到每个模块的，一些其他原因没有做这个功能)
 
 打包时会生成4个文件：
-`vendor.css`，`vendors.js`
+`vendor.css`，`vendor.js`
 `app.css`，`app.js`
 
 
 ## 项目结构
 
 ```
-ProjectName/                        //项目名 
+ProjectName/ 项目名 
 ├── node_modules/   
-├── src/                            //开发目录               
-│     ├── app/                      //所有的前端代码会放在这里
-│     │     ├── index/ 首页
-│     │     │       ├── index.controller.js     // controller
-│     │     │       ├── index.html              // View
-│     │     │       ├── index.less              // less
-│     │     │       ├── index.service.js        // api
-│     │     │       └── index.state.js          // router
+├── src/ 开发目录               
+│     ├── app/ 所有的前端代码会放在这里
+│     │     ├── pages/ 页面
+│     │     │       ├── index/ 首页
+│     │     │       │       ├── index.controller.js     // controller
+│     │     │       │       ├── index.html              // View
+│     │     │       │       ├── index.less              // less
+│     │     │       │       ├── index.service.js        // api
+│     │     │       │       └── index.state.js          // router
+│     │     │       └── 其他页面/ 首页
 │     │     ├── layouts/ 公共布局
 │     │     │       ├── navbar / 
 │     │     │       │       ├── navbar.controller.js        
 │     │     │       │       ├── navbar.less                 
 │     │     │       │       └── navbar.html                  
-│     │     │       └── footer /        
+│     │     │       └── footer /  
+│     │     ├── components/ 公共组件
+│     │     │       ├── frontPagination / 
+│     │     │       │       ├── frontPagination.directive.js        
+│     │     │       │       ├── frontPagination.less                 
+│     │     │       │       └── frontPagination.html                  
+│     │     │       └── footer /     
+│     │     ├── services/ 公共服务配置
+│     │     │       ├── config/ 配置
+│     │     │       └── interceptor/ 注入    
 │     │     ├── styles/ 公共样式文件
 │     │     │       ├── common.less             // 公共less
 │     │     │       └── iconfont.less           // 字体文件
-│     │     ├── app.config.js            // 全局插件配置
 │     │     ├── app.constants.js         // 静态配置
 │     │     ├── app.module.js            // 全局module，所有的插件都在这里引入
 │     │     └── app.state.js             // router
 │     ├── bower_components/ bower插件目录
 │     ├── assets/ 静态资源
-│     │     ├── css/                //自动生成css文件夹(不用管)
+│     │     ├── css/                //pages中less文件自动生成的css.
 │     │     ├── fonts/              //字体文件
 │     │     └── images/             //图片
 │     ├── vendors/ 自定义插件,需要手动引入到index.html
@@ -111,5 +121,5 @@ gulp build
 
 ## 可能遇到的问题？
 **项目所有js合成了一个文件,首次加载会很慢？**
-可以参考[oclazyload](https://oclazyload.readme.io/)， [关于解决前端首页加载慢的问题]([https://zhangangs.github.io/2018/06/19/%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/)
+可以参考[oclazyload](https://oclazyload.readme.io/)， [关于解决前端首页加载慢的问题](https://zhangangs.github.io/2018/06/19/%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/)
   
